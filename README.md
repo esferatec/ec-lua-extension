@@ -10,7 +10,7 @@ The extension module contains several type checking functions and string operati
 
 Copy the folder "eclua" with the file "extension.lua" into your program folder.
 
-```
+```text
 [programm]
 |
 |----eclua
@@ -24,13 +24,13 @@ Copy the folder "eclua" with the file "extension.lua" into your program folder.
 
 To use the extension in your program file, load the module with the following command:
 
-``` Lua
+```lua
 require("eclua.extension")
 ```
 
 Then the function can be called directly as follows:
 
-``` Lua
+```text
 isnumber(v) -- Return true if the value is a number and false otherwise.
 isinteger(v) -- Return true if the value is a integer and false otherwise.
 isfloat(v) -- Return true if the value is a float and false otherwise.
@@ -49,7 +49,7 @@ The parameter "value" is the variable which type is to be checked.
 
 The following example checks whether the variable "amount" is a number or not.
 
-``` Lua
+```lua
 require("ecluas.extension")
 
 local amount = 123
@@ -61,7 +61,7 @@ else
 end
 ```
 
-``` Lua
+```text
 > 123: is a number
 ```
 
