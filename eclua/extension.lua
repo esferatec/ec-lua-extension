@@ -1,38 +1,38 @@
 -- Represents a extension module for lua.
 
 -- Return true if the value is a number and false otherwise.
-function isnumber(value)
-   return type(value) == "number"
+function isnumber(v)
+   return type(v) == "number"
 end
 
 -- Return true if the value is a integer and false otherwise.
-function isinteger(value)
-   return math.type(value) == "integer"
+function isinteger(v)
+   return math.type(v) == "integer"
 end
 
 -- Return true if the value is a float and false otherwise.
-function isfloat(value)
-   return math.type(value) == "float"
+function isfloat(v)
+   return math.type(v) == "float"
 end
 
 -- Return true if the value is a string and false otherwise.
-function isstring(value)
-   return type(value) == "string"
+function isstring(v)
+   return type(v) == "string"
 end
 
 -- Return true if the value is nil and false otherwise.
-function isnil(value)
-   return type(value) == "nil"
+function isnil(v)
+   return type(v) == "nil"
 end
 
 -- Return true if the value is a table and false otherwise.
-function istable(value)
-   return type(value) == "table"
+function istable(v)
+   return type(v) == "table"
 end
 
 -- Return true if the value is a function and false otherwise.
-function isfunction(value)
-   return type(value) == "function"
+function isfunction(v)
+   return type(v) == "function"
 end
 
 -- Removes any leading and trailing whitespace characters.
