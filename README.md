@@ -67,6 +67,6 @@ end
 
 ## License
 
-ec-lua-extension is copyright (c) 2023 by esferatec.
+Copyright (c) 2023 by esferatec.
 It is open source, released under the MIT License.
 See full copyright notice in the LICENSE.md file.
