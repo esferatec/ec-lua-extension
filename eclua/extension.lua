@@ -34,3 +34,18 @@ end
 function isfunction(value)
    return type(value) == "function"
 end
+
+-- Removes any leading and trailing whitespace characters.
+function string.trim(s)
+   return string.gsub(s, "^%s*(.-)%s*$", "%1")
+end
+
+-- Removes any leading whitespace characters.
+function string.trimstart(s)
+   return string.gsub(s, "^%s+", "")
+end
+
+-- Removes any trailing whitespace characters.
+function string.trimend(s)
+   return string.gsub(s, "%s+$", "")
+end
