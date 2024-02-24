@@ -43,8 +43,6 @@ string.trimstart(s) -- Removes any leading whitespace characters.
 string.trimend(s) -- Removes any trailing whitespace characters.
 ```
 
-The parameter "value" is the variable which type is to be checked.
-
 ## Example
 
 The following example checks whether the variable "amount" is a number or not.
