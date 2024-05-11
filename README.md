@@ -31,16 +31,19 @@ require("eclua.extension")
 Then the function can be called directly as follows:
 
 ```text
-isnumber(v) -- Return true if the value is a number and false otherwise.
-isinteger(v) -- Return true if the value is a integer and false otherwise.
 isfloat(v) -- Return true if the value is a float and false otherwise.
-isstring(v) -- Return true if the value is a integer and false otherwise.
-isnil(v) -- Return true if the value is nil and false otherwise.
-istable(v) -- Return true if the value is a table and false otherwise.
 isfunction(v) -- Return true if the value is a function and false otherwise.
+isinteger(v) -- Return true if the value is a integer and false otherwise.
+isnil(v) -- Return true if the value is nil and false otherwise.
+isnumber(v) -- Return true if the value is a number and false otherwise.
+isstring(v) -- Return true if the value is a integer and false otherwise.
+istable(v) -- Return true if the value is a table and false otherwise.
+
+string.count(s) -- Return the number of occurrences of substring.
+string.split(s, sep) -- Return a list of the words in the string, using sep as the delimiter string.
 string.trim(s) -- Removes any leading and trailing whitespace characters.
-string.trimstart(s) -- Removes any leading whitespace characters.
 string.trimend(s) -- Removes any trailing whitespace characters.
+string.trimstart(s) -- Removes any leading whitespace characters.
 ```
 
 ## Example
