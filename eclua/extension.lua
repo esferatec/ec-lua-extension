@@ -37,31 +37,55 @@ function isfunction(v)
    return type(v) == "function"
 end
 
+-- Return true if the value is a boolean and false otherwise.
+function isboolean(v)
+   return type(v) == "boolean"
+end
+
+--#endregion
+
+--#region type convert
+
+-- Convert a number or string to boolean
+function toboolean(v)
+   if isnumber(v) then
+      return v ~= 0
+   end
+
+   if isstring(v) then
+      return v:lower() == "true"
+   end
+
+   return false
+end
+
 --#endregion
 
 --#region string functions
 
 -- Remove any leading and trailing whitespace characters.
 function string.trim(s)
-   return string.gsub(s, "^%s*(.-)%s*$", "%1")
+   return s:gsub("^%s*(.-)%s*$", "%1")
 end
 
 -- Remove any leading whitespace characters.
 function string.trimstart(s)
-   return string.gsub(s, "^%s+", "")
+   return s:gsub("^%s+", "")
 end
 
 -- Remove any trailing whitespace characters.
 function string.trimend(s)
-   return string.gsub(s, "%s+$", "")
+   return s:gsub("%s+$", "")
 end
 
 -- Return the number of occurrences of substring.
 function string.count(s, sub, start, finish)
    start = start or 1
    finish = finish or #s
+
    local count = 0
    local i = start
+
    while i <= finish do
       if s:sub(i, i + #sub - 1) == sub then
          count = count + 1
@@ -70,18 +94,48 @@ function string.count(s, sub, start, finish)
          i = i + 1
       end
    end
+
    return count
 end
 
--- Return a list of the words in the string, using sep as the delimiter string.
-function string.split(s, sep)
-   sep = sep or "%s"
-   local words = {}
-   for word in s:gmatch("([^" .. sep .. "]+)") do
-      table.insert(words, word)
-   end
-   return words
+-- Return true if all characters in the string are numeric and false otherwise.
+function string.isnumeric(s)
+   return s:match("^%d+$") ~= nil
+end
+
+-- Return true if all characters in the string are upper case and false otherwise.
+function string.isupper(s)
+   return s == s:upper()
+end
+
+-- Return true if all characters in the string are lower case and false otherwise.
+function string.islower(s)
+   return s == s:lower()
+end
+
+-- Return true if the string ends with the specified suffix and false otherwise.
+function string.endswith(s, suffix)
+   return s:sub(- #suffix) == suffix
+end
+
+-- Return true if the string starts with the specified suffix and false otherwise.
+function string.startswith(s, prefix)
+   return s:sub(1, #prefix) == prefix
+end
+
+-- Indicates whether a specified string consists only of whitespace.
+function string.iswhitespace(s)
+   return s:match("^%s*$") ~= nil
+end
+
+-- Indicates whether a specified string is nil.
+function string.isnil(s)
+   return s == nil
+end
+
+-- Indicates whether a specified string is empty.
+function string.isempty(s)
+   return s == ''
 end
 
 --#endregion
-

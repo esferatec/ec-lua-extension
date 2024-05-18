@@ -31,6 +31,7 @@ require("eclua.extension")
 Then the function can be called directly as follows:
 
 ```text
+isboolean(v) -- Return true if the value is a boolean and false otherwise.
 isfloat(v) -- Return true if the value is a float and false otherwise.
 isfunction(v) -- Return true if the value is a function and false otherwise.
 isinteger(v) -- Return true if the value is a integer and false otherwise.
@@ -39,8 +40,17 @@ isnumber(v) -- Return true if the value is a number and false otherwise.
 isstring(v) -- Return true if the value is a integer and false otherwise.
 istable(v) -- Return true if the value is a table and false otherwise.
 
+toboolean(v) -- Convert a number or string to boolean
+
 string.count(s) -- Return the number of occurrences of substring.
-string.split(s, sep) -- Return a list of the words in the string, using sep as the delimiter string.
+string.endswith(s, suffix) -- Return true if the string ends with the specified suffix and false otherwise.
+string.isempty(s) -- Indicates whether a specified string is empty.
+string.islower(s) -- Return true if all characters in the string are lower case and false otherwise.
+string.isnil(s) -- Indicates whether a specified string is nil.
+string.isnumeric(s) -- Return true if all characters in the string are numeric and false otherwise.
+string.isupper(s) -- Return true if all characters in the string are upper case and false otherwise.
+string.iswhitespace(s) -- Indicates whether a specified string consists only of whitespace.
+string.startswith(s, prefix) -- Return true if the string starts with the specified suffix and false otherwise.
 string.trim(s) -- Removes any leading and trailing whitespace characters.
 string.trimend(s) -- Removes any trailing whitespace characters.
 string.trimstart(s) -- Removes any leading whitespace characters.
@@ -51,7 +61,7 @@ string.trimstart(s) -- Removes any leading whitespace characters.
 The following example checks whether the variable "amount" is a number or not.
 
 ```lua
-require("ecluas.extension")
+require("eclua.extension")
 
 local amount = 123
 
