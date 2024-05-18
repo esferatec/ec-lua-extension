@@ -123,17 +123,17 @@ function string.startswith(s, prefix)
    return s:sub(1, #prefix) == prefix
 end
 
--- Indicates whether a specified string consists only of whitespace.
+-- Indicate whether a specified string consists only of whitespace.
 function string.iswhitespace(s)
    return s:match("^%s*$") ~= nil
 end
 
--- Indicates whether a specified string is nil.
+-- Indicate whether a specified string is nil.
 function string.isnil(s)
    return s == nil
 end
 
--- Indicates whether a specified string is empty.
+-- Indicate whether a specified string is empty.
 function string.isempty(s)
    return s == ''
 end
