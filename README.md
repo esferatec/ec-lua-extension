@@ -41,6 +41,7 @@ isstring(v) -- Return true if the value is a integer and false otherwise.
 istable(v) -- Return true if the value is a table and false otherwise.
 
 toboolean(v) -- Convert a number or string to boolean
+totable(v) -- Convert a number or string to table
 
 string.count(s) -- Return the number of occurrences of substring.
 string.endswith(s, suffix) -- Return true if the string ends with the specified suffix and false otherwise.

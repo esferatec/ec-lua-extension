@@ -59,6 +59,25 @@ function toboolean(v)
    return false
 end
 
+-- Convert a number or string to table
+function totable(v)
+   local result = {}
+
+   if isstring(v) then
+      for word in v:gmatch("%S+") do
+         table.insert(result, word)
+      end
+   end
+
+   if isnumber(v) then
+      for digit in tostring(v):gmatch("%d") do
+         table.insert(result, tonumber(digit))
+      end
+   end
+
+   return result
+end
+
 --#endregion
 
 --#region string functions
