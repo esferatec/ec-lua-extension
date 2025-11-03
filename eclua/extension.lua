@@ -48,10 +48,10 @@ end
 
 -- Convert a number or string to boolean
 function toboolean(v)
-      if isboolean(v) then
+   if isboolean(v) then
       return v
    end
-   
+
    if isnumber(v) then
       return v ~= 0
    end
